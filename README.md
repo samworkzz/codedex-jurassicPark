@@ -25,8 +25,7 @@ Welcome to the **Jurassic Park Dino Adoption Website** repository! This project 
 
 ## Demo
 
-To see the project live, visit: https://samworkzz.github.io/codex-jurasicPark/ 
-
+To see the project live, visit: https://samworkzz.github.io/codedex-jurassicPark/
 ---
 
 ## Installation
