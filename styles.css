@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'VT323', monospace;
+    color: #00FF00;
+    background: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-q4ChHEGKnzc1DaK9T6rnla7Cwyyrsp.png') no-repeat center center fixed;
+    background-size: cover;
+    background-color: #000000;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #00FF00;
+}
+
+h1 {
+    font-size: 4em;
+    margin: 0;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: 
+        3px 3px 0 #FF00FF,
+        -3px -3px 0 #00FFFF,
+        3px -3px 0 #FFFF00,
+        -3px 3px 0 #FF00FF;
+    animation: glitch 0.5s infinite alternate;
+}
+
+@keyframes glitch {
+    0% { text-shadow: 3px 3px 0 #FF00FF, -3px -3px 0 #00FFFF; }
+    25% { text-shadow: -3px -3px 0 #FF00FF, 3px 3px 0 #00FFFF; }
+    50% { text-shadow: 3px -3px 0 #FFFF00, -3px 3px 0 #FF00FF; }
+    75% { text-shadow: -3px 3px 0 #FFFF00, 3px -3px 0 #00FFFF; }
+    100% { text-shadow: 3px 3px 0 #FF00FF, -3px -3px 0 #00FFFF; }
+}
+
+#dino-container {
+    position: relative;
+    height: calc(100vh - 150px);
+    overflow: hidden;
+}
+
+.dino {
+    position: fixed;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    filter: 
+        drop-shadow(0 0 10px #00FFFF)
+        brightness(1.2)
+        contrast(1.2);
+}
+
+.dino:hover {
+    transform: scale(1.1) rotate(5deg);
+    filter: 
+        drop-shadow(0 0 15px #FF00FF)
+        brightness(1.5)
+        contrast(1.5);
+}
+
+#info-panel {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 5px dashed #FF00FF;
+    padding: 20px;
+    text-align: center;
+    z-index: 1000;
+}
+
+#info-panel.hidden {
+    display: none;
+}
+
+#adopted-dinos {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 3px dashed #00FFFF;
+    padding: 10px;
+    max-width: 300px;
+}
+
+#adopted-list {
+    list-style-type: none;
+    padding: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.fun-fact {
+    margin-top: 10px;
+    font-style: italic;
+    color: #FFFF00;
+}
+
+#sound-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #00FF00;
+}
+
+#sound-toggle:hover {
+    transform: scale(1.1);
+}
+

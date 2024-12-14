@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jurassic Park: Dino Adoption</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Jurassic Park</h1>
+        <marquee scrollamount="10">Welcome to Jurassic Park! Click on dinosaurs to learn more and adopt them!</marquee>
+        <button id="sound-toggle" aria-label="Mute sound">🔊</button>
+    </header>
+    
+    <div id="dino-container"></div>
+    
+    <div id="info-panel" class="hidden">
+        <h2 id="dino-name"></h2>
+        <p id="dino-species"></p>
+        <p id="dino-era"></p>
+        <!-- The fun fact will be inserted here by JavaScript -->
+        <input type="text" id="adoption-name" placeholder="Give your dino a name" maxlength="20">
+        <button id="adopt-button">Adopt</button>
+        <button id="close-panel">Close</button>
+    </div>
+
+    <div id="adopted-dinos">
+        <h3>Your Adopted Dinos:</h3>
+        <ul id="adopted-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
